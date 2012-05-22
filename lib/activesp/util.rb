@@ -31,7 +31,7 @@ module ActiveSP
   private
     
     def decode_field_name(name)
-      name.gsub(/_x([0-9af]{4})_/i) { [$1.to_i(16)].pack("U") }
+      name.gsub(/_x([0-9a-f]{4})_/i) { [$1.to_i(16)].pack("U") }
     end
     
     def clean_attributes(attributes)
